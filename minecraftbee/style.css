@@ -1,32 +1,89 @@
 @import url('https://fonts.cdnfonts.com/css/devil-breeze');
 @import url('https://fonts.cdnfonts.com/css/poppins');
-@import url('https://fonts.cdnfonts.com/css/bimbo');
-
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
 
 body {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
-    background-color: #1B1B1B;
-    color: #eef8ce;
+    background-color: #1f5eff;
+    color: #e3e3b5;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     background-image:
-    url(img/bg.webp),
-    repeating-linear-gradient(
-        to right, transparent 0 500px, #73814B33 500px 501px
-    );
+        url(img/bg.webp),
+        repeating-linear-gradient(
+            to right, transparent 0 500px, #0e56ff33 500px 501px
+        );
     background-size: 90%;
+    background-repeat: no-repeat, repeat;
 }
 *::-webkit-scrollbar {
     width: 0;
 }
-
 * {
     padding: 0;
     margin: 0;
     list-style: none;
     box-sizing: border-box;
 }
+
+/* --- Estilo Pixel/Bloque --- */
+.pixel-border {
+    border: 4px solid #3e513c;
+    box-shadow: 0 0 0 8px #48cc39, 0 0 0 12px #262b19;
+    border-radius: 0;
+    image-rendering: pixelated;
+}
+
+/* --- Header y Navegación --- */
+header {
+    padding-block: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    background: #070707;
+    border-bottom: 4px solid #48cc39;
+    box-shadow: 0 6px 0 #48cc39;
+}
+header .content-fit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: unset!important;
+    padding-block: unset!important;
+}
+.logo {
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
+    color: #ffffff;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: 0 3px #3e513c, 2px 0 #fff5;
+}
+header nav ul{
+    display: flex;
+    gap: 2em;
+}
+header nav ul li {
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
+    background: #dfff9f;
+    color: #42440c;
+    margin-left: 10px;
+    padding: 4px 18px;
+    border: 2px solid #527013;
+    border-radius: 6px;
+    box-shadow: 2px 2px 0 #b5ff41;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+header nav ul li:hover {
+    background: #b5ff41;
+    color: #333;
+    box-shadow: 2px 2px 0 #8AB73B;
+}
+
+/* --- Secciones principales --- */
 .section {
     width: 100%;
     min-height: 100vh;
@@ -34,6 +91,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .content-fit {
@@ -43,35 +101,18 @@ body {
     position: relative;
     padding-block: 10em;
 }
-header {
-    padding-block: 1em;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10px;
-    backdrop-filter: blur(20px);
-    z-index: 100;
-    background-color: #1B1B1B11;
-    background-image: repeating-linear-gradient(
-        to right, transparent 0 500px, #eee1 500px 501px
-    );
-}
-header .content-fit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: unset!important;
-    padding-block: unset!important;
-}
-header .content-fit nav ul{
-    display: flex;
-    gap: 2em;
-}
 
+/* --- Títulos y Números con estilo Minecraft --- */
+#banner .title,
+.section .number,
+.section .content-fit .title {
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
+    text-shadow: 3px 3px 0 #527013, 1px 1px 0 #fff5;
+    letter-spacing: 2px;
+}
 #banner .title {
-    color: #d1ff48;
-    font-size: 11em;
-    font-family: "devil breeze";
+    color: #b5ff41;
+    font-size: 9em;
     font-weight: bold;
     position: relative;
     text-align: center;
@@ -83,52 +124,73 @@ header .content-fit nav ul{
     inset: 0.66em 0 0 0;
     z-index: -1;
     color: #445022;
-}
-.section .decorate {
-    position: absolute;
-}
-#intro .content-fit {
-    display: flex;
-    gap: 30%;
-    justify-content: space-between;
-    align-items: center;
+    opacity: 0.13;
+    font-size: 0.5em;
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
 }
 .section .number {
-    font-family: "devil breeze";
-    font-size: 15em;
+    font-size: 9em;
+    color: #9dee13;
+    opacity: 0.92;
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
     font-weight: bold;
 }
 .section .content-fit .title {
-    font-family: "devil breeze";
-    font-size: 5em;
+    color: #ffe45e;
+    font-size: 4em;
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
     font-weight: bold;
 }
+
+/* --- Descripción y bloques de contenido --- */
+.section .des, #contact .content-fit, table {
+    background: #1d2e0dE6;
+    padding: 2em 2.5em;
+    border-radius: 12px;
+    margin-top: 2em;
+    border: 3px solid #8AB73B;
+    box-shadow: 0 0 0 5px #e2ff8a55;
+    font-size: 1.18em;
+}
+
+/* --- Imágenes decorativas estilo pixel --- */
+.section .decorate {
+    position: absolute;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 8px 6px #1852ffaa);
+}
+.section img.decorate {
+    border-radius: 3px;
+}
+
+/* --- Ajustes para la mielera y honey (ajusta según tu gusto) --- */
+#description .decorate,
+#banner .decorate {
+    /* El style inline manda, pero aquí puedes sobreescribir global */
+}
+
 #description .content-fit {
-    padding-right: 30%;
+    padding-right: 32%;
 }
-#description .number {
-    font-size: 5em;
-}
-#description .title {
-    font-size: 7em;
-    font-weight: 500;
-}
-#contact .content-fit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
+
+/* --- Tabla de contacto estilo bloque/pixelado --- */
 #contact table {
+    border-collapse: separate;
+    border-spacing: 0 0.5em;
+    background: #202c11CC;
+    border: 2px solid #527013;
+    box-shadow: 0 0 0 3px #8AB73B44;
+    color: #c7f76e;
     width: min(800px, 90vw);
     padding-top: 2em;
     font-size: 2em;
     margin: auto;
 }
 #contact table td {
-    padding-block: 0.5em;
-    border-bottom: 1px dashed #445022;
+    font-family: 'Poppins', 'Minecraft', monospace;
+    font-size: 1.15em;
+    border-bottom: 1px dotted #b5ff41;
+    padding: 0.5em 1em;
 }
 #contact table td:nth-child(1) {
     text-align: left;
@@ -138,17 +200,45 @@ header .content-fit nav ul{
     text-align: right;
     font-weight: 200;
 }
+
+/* --- Firmas y detalles --- */
 #contact .sign {
-    font-family: 'Bimbo', sans-serif;
-    font-size: 10em;
+    font-family: 'Minecraft', 'Bimbo', cursive;
+    color: #ffe45e;
+    font-size: 4em;
+    margin-top: 1.5em;
+    text-shadow: 2px 2px 0 #3e513c, 1px 1px 0 #fff5;
 }
+
+/* --- Botón Minecraft (por si lo usas) --- */
+.btn-minecraft {
+    font-family: 'Minecraft', 'Poppins', sans-serif;
+    background: #ffe45e;
+    border: 2px solid #527013;
+    color: #527013;
+    font-size: 1.3em;
+    padding: 8px 24px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0 #b5ff41;
+    margin-top: 2em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-minecraft:hover {
+    background: #b5ff41;
+    color: #333;
+    box-shadow: 2px 2px 0 #8AB73B;
+}
+
+/* --- Contenedor 3D overlay --- */
 #container3D {
     position: fixed;
     inset: 0;
-    /* background-color: red; */
-    z-index: 100;
+    z-index: 90;
     pointer-events: none;
 }
+
+/* --- Responsive: mantiene el estilo en móvil --- */
 @media screen and (max-width: 1023px){
     #banner .title {
         font-size: 5em;
@@ -156,30 +246,36 @@ header .content-fit nav ul{
     #intro .content-fit {
         flex-direction: column;
     }
-}
-@media screen and (max-width: 767px){
-    #banner .title {
-        font-size: 3em;
-    }
-    #intro .content-fit {
-        flex-direction: column;
-    }
     .section .number {
-        font-size: 5em;
-    }
-    .section .content-fit .title {
-        font-size: 2em;
+        font-size: 4em;
     }
     #description .content-fit {
         padding-right: 0;
     }
-    #contact table {
-        font-size: 1em;
+}
+@media screen and (max-width: 767px){
+    .section .des, #contact .content-fit, table {
+        padding: 1em 0.8em;
+        font-size: 0.95em;
     }
     #contact .sign {
         font-size: 2em;
     }
+    #banner .title {
+        font-size: 2.5em;
+    }
+    .section .number {
+        font-size: 2.5em;
+    }
+    .section .content-fit .title {
+        font-size: 1.2em;
+    }
     #container3D {
         position: absolute;
     }
+}
+
+/* Opcional: divide las secciones para darle aire visual */
+.section:not(:last-child) {
+    border-bottom: 2px solid #262b19;
 }

@@ -66,19 +66,19 @@ header nav ul{
 }
 header nav ul li {
     font-family: 'Minecraft', 'devil breeze', sans-serif;
-    background: #dfff9f;
-    color: #42440c;
+    background: #4adc4f;
+    color: #000000;
     margin-left: 10px;
     padding: 4px 18px;
     border: 2px solid #527013;
     border-radius: 6px;
-    box-shadow: 2px 2px 0 #b5ff41;
+    box-shadow: 2px 2px 0 #a5e244;
     transition: all 0.2s;
     cursor: pointer;
     font-size: 1.2em;
 }
 header nav ul li:hover {
-    background: #b5ff41;
+    background: #57d41d;
     color: #333;
     box-shadow: 2px 2px 0 #8AB73B;
 }
@@ -174,40 +174,65 @@ header nav ul li:hover {
 }
 
 /* --- Tabla de contacto estilo bloque/pixelado --- */
-#contact table {
-    border-collapse: separate;
-    border-spacing: 0 0.5em;
-    background: #202c11CC;
-    border: 2px solid #527013;
-    box-shadow: 0 0 0 3px #8AB73B44;
-    color: #c7f76e;
-    width: min(800px, 90vw);
-    padding-top: 2em;
-    font-size: 2em;
-    margin: auto;
+.contact-panel {
+    margin: 2em auto;
+    background: #1d2e0d;
+    border: 4px solid #b5ff41;
+    border-radius: 10px;
+    box-shadow: 0 0 16px #8ab73b33, 0 0 0 8px #222a19;
+    width: 60wp;
+    max-width: 90vw;
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    font-family: 'Poppins', 'Minecraft', sans-serif;
 }
-#contact table td {
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222a19cc;
+    border: 2px solid #8ab73b88;
+    border-radius: 7px;
+    padding: 0.7em 1em;
+    font-size: 1.22em;
+    box-shadow: 0 2px 0 #8ab73b22;
+    transition: background 0.15s;
+}
+
+.contact-label {
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
+    color: #ffe45e;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #8ab73b66;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.contact-value {
     font-family: 'Poppins', 'Minecraft', monospace;
-    font-size: 1.15em;
-    border-bottom: 1px dotted #b5ff41;
-    padding: 0.5em 1em;
-}
-#contact table td:nth-child(1) {
-    text-align: left;
-    font-weight: 500;
-}
-#contact table td:nth-child(2) {
+    color: #b5ff41;
+    font-size: 1.1em;
     text-align: right;
-    font-weight: 200;
+    word-break: break-all;
+}
+
+.contact-item:hover {
+    background: #273b13ee;
 }
 
 /* --- Firmas y detalles --- */
 #contact .sign {
     font-family: 'Minecraft', 'Bimbo', cursive;
-    color: #ffe45e;
+    color: #ffffff;
     font-size: 4em;
     margin-top: 1.5em;
-    text-shadow: 2px 2px 0 #3e513c, 1px 1px 0 #fff5;
+    text-shadow: 2px 2px 0 #000000, 1px 1px 0 rgba(94, 94, 94, 0.333);
+    text-align: center;
 }
 
 /* --- Botón Minecraft (por si lo usas) --- */
@@ -228,6 +253,55 @@ header nav ul li:hover {
     background: #b5ff41;
     color: #333;
     box-shadow: 2px 2px 0 #8AB73B;
+}
+.minecraft-footer {
+    width: 100%;
+    background: #111c0d;
+    border-top: 4px solid #48cc39;
+    box-shadow: 0 -6px 0 #48cc39;
+    padding: 2em 0 1em 0;
+    color: #e3e3b5;
+    margin-top: 4em;
+    font-size: 1.12em;
+    text-align: center;
+    font-family: 'Poppins', 'Minecraft', sans-serif;
+    position: relative;
+    z-index: 50;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+.footer-logo {
+    font-family: 'Minecraft', 'devil breeze', sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-bottom: 0.15em;
+    text-shadow: 0 2px #3b7734, 2px 0 rgba(0, 0, 0, 0.333);
+    display: block;
+}
+.footer-text {
+    color: #e3e3b5;
+    font-size: 1em;
+    opacity: 0.85;
+}
+.footer-links {
+    font-size: 1em;
+    margin-top: 0.3em;
+}
+.footer-links a {
+    color: #b5ff41;
+    text-decoration: none;
+    font-family: 'Minecraft', 'Poppins', sans-serif;
+    margin: 0 0.25em;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #ffe45e;
+    text-decoration: underline;
 }
 
 /* --- Contenedor 3D overlay --- */
@@ -275,7 +349,7 @@ header nav ul li:hover {
     }
 }
 
-/* Opcional: divide las secciones para darle aire visual */
+/* Opcional: divide las secciones para darle aire visual 
 .section:not(:last-child) {
     border-bottom: 2px solid #262b19;
-}
+}*/

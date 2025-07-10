@@ -65,7 +65,7 @@ header nav ul{
     gap: 2em;
 }
 header nav ul li {
-    font-family: 'Minecraft', 'devil breeze', sans-serif;
+    font-family: 'Minecraft', 'devil breeze', 'sans-serif';
     background: #4adc4f;
     color: #000000;
     margin-left: 10px;
@@ -73,7 +73,7 @@ header nav ul li {
     border: 2px solid #527013;
     border-radius: 6px;
     box-shadow: 2px 2px 0 #a5e244;
-    transition: all 0.2s;
+    transition: all 0.2;
     cursor: pointer;
     font-size: 1.2em;
 }
